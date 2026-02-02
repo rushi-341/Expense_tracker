@@ -57,65 +57,6 @@ Expense_tracker/
 ├── .gitignore
 └── README.md
 ```
-# Expense Tracker 💰
-
-A full-stack Expense Tracker application that allows users to manage daily expenses with authentication, analytics, and a clean UI.
-
----
-
-## 🚀 Features
-
-- User Registration & Login (JWT Authentication)
-- Add, View, and Delete Expenses
-- Protected Routes
-- Weekly Expense Analytics (Charts)
-- Dashboard with Welcome Message
-- Responsive UI (Mobile + Desktop)
-
----
-
-## 🛠 Tech Stack
-
-### Frontend
-- React (Vite)
-- Axios
-- Recharts
-- React Router DOM
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
-- JWT Authentication
-- bcryptjs
-
----
-
-## 📁 Project Structure
-Expense_tracker/
-│
-├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── api/
-│ │ └── styles/
-│ ├── package.json
-│ └── vite.config.js
-│
-├── backend/
-│ ├── controllers/
-│ ├── routes/
-│ ├── models/
-│ ├── middleware/
-│ ├── database/
-│ ├── server.js
-│ └── package.json
-│
-├── .gitignore
-└── README.md
-
----
 
 ## ⚙️ Environment Variables
 
