@@ -7,7 +7,7 @@
 }
 
 .logo {
-  color: #38bdf8;
+  color: #ffffff;   /* ✅ WHITE */
   font-size: 22px;
   font-weight: 600;
 }
@@ -29,7 +29,7 @@
   color: #38bdf8;
 }
 
-/* 🔥 ACTIVE PAGE */
+/* Active page */
 .nav-link.active {
   color: #38bdf8;
   border-bottom: 2px solid #38bdf8;
