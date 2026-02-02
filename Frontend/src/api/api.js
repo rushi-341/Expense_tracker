@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://expense-tracker-backend-pvu4.onrender.com/api"
+  baseURL:import.meta.env.VITE_API_URL
 });
 
 // 🔐 Attach token to every request
