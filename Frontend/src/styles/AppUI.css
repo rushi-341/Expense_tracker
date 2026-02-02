@@ -1,0 +1,235 @@
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 2rem;
+  color: #fff;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+}
+
+.logout-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.action-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+.form-button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #fff;
+  color: #4c51bf;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  transform: translateY(-2px);
+}
+
+.expense-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: rgba(255,0,0,0.3);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: rgba(255,0,0,0.5);
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-left h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.navbar-center a {
+  margin: 0 1rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-center a:hover {
+  text-decoration: underline;
+}
+
+.navbar-right button {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar-right button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+/* WEEK NAVIGATION BUTTONS */
+.week-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.week-btn {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.week-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.week-btn:active {
+  transform: translateY(0);
+}
+
+.week-label {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 768px) {
+
+  .app-container {
+    padding: 1rem;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar-center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-center a {
+    margin: 0.4rem 0;
+  }
+
+  .navbar-right {
+    width: 100%;
+  }
+
+  .navbar-right button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CARDS */
+  .glass-card {
+    padding: 1.2rem;
+  }
+
+  .stat-card {
+    font-size: 1.2rem;
+  }
+
+  /* FORMS */
+  .form-input,
+  .form-select,
+  .form-button {
+    font-size: 0.95rem;
+  }
+
+  /* EXPENSE CARD */
+  .expense-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
+
