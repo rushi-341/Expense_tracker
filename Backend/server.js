@@ -1,40 +1,36 @@
 const express = require("express");
 const cors = require("cors");
-const connectedDb = require("./database/db.js");
-const authRoutes = require("./routes/authRoutes.js");
-const expenseRoutes = require("./routes/expenseRoutes.js");
-const dashBoardRoutes = require("./routes/dashBoardRoutes.js");
 require("dotenv").config();
+
+const connectedDb = require("./database/db");
+const authRoutes = require("./routes/authRoutes");
+const expenseRoutes = require("./routes/expenseRoutes");
+const dashBoardRoutes = require("./routes/dashBoardRoutes");
 
 const app = express();
 
-/* ---------- CORS (VERY IMPORTANT) ---------- */
+// ✅ MIDDLEWARES (ORDER MATTERS)
+app.use(express.json());
+
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    /^https:\/\/.*\.netlify\.app$/   // allow ALL netlify domains
+    /^https:\/\/.*\.netlify\.app$/
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-// handle preflight requests
-app.options("*", cors());
-
-/* ---------- MIDDLEWARE ---------- */
-app.use(express.json());
-
-/* ---------- DB ---------- */
+// ✅ CONNECT DB
 connectedDb();
 
-/* ---------- ROUTES ---------- */
+// ✅ ROUTES
 app.use("/api/user", authRoutes);
 app.use("/api/user/dashboard", dashBoardRoutes);
 app.use("/api/expenses", expenseRoutes);
 
-/* ---------- SERVER ---------- */
+// ✅ SERVER
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
