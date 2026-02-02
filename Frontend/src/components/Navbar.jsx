@@ -1,31 +1,38 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
-import "../styles/AppUI.css";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const { logout } = useContext(AuthContext);
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    logout();
-    navigate("/login");
-  };
-
   return (
     <nav className="navbar">
-      <div className="navbar-left">
-        <h2>💰 Expense Tracker</h2>
-      </div>
+      <h2 className="logo">Expense Manager</h2>
 
-      <div className="navbar-center">
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/expenses/add">Add Expense</Link>
-        <Link to="/expenses/manage">Manage Expenses</Link>
-      </div>
+      <div className="nav-links">
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Dashboard
+        </NavLink>
 
-      <div className="navbar-right">
-        <button onClick={handleLogout}>Logout</button>
+        <NavLink
+          to="/expenses/add"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Add Expense
+        </NavLink>
+
+        <NavLink
+          to="/expenses/manage"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Manage Expenses
+        </NavLink>
       </div>
     </nav>
   );
