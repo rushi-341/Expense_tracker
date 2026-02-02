@@ -33,7 +33,30 @@ A full-stack Expense Tracker application that allows users to manage daily expen
 ---
 
 ## 📁 Project Structure
-
+```
+Expense_tracker/
+│
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── api/
+│ │ └── styles/
+│ ├── package.json
+│ └── vite.config.js
+│
+├── backend/
+│ ├── controllers/
+│ ├── routes/
+│ ├── models/
+│ ├── middleware/
+│ ├── database/
+│ ├── server.js
+│ └── package.json
+│
+├── .gitignore
+└── README.md
+```
 # Expense Tracker 💰
 
 A full-stack Expense Tracker application that allows users to manage daily expenses with authentication, analytics, and a clean UI.
